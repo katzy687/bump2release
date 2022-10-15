@@ -20,6 +20,12 @@
       ]
     },
     {
+      "title": "### Tests Added ✅",
+      "labels": [
+        "tests"
+      ]
+    },
+    {
       "title": "### Documentation \uD83D\uDCDD",
       "labels": [
         "documentation"
