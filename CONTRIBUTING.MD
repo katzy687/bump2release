@@ -34,6 +34,11 @@ commit and skip pre-commit action
 git commit -m "my commit message" --no-verify
 ```
 
+skip CI on push (if you updated docs and want to skip linting and tests for example)
+```commandline
+git push -o ci.skip
+```
+
 ## Release / CI
 
 - Some default Github Actions workflows for linting and release packaging are included.
