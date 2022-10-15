@@ -1,9 +1,8 @@
 import subprocess
 
-from bump2release import constants
-from bump2release import exceptions
 from utils import run_command
-from bump2release import colorama_handler
+
+from bump2release import colorama_handler, constants, exceptions
 
 
 def get_current_version():
@@ -43,14 +42,11 @@ def run_bump2version(version_part: str, target_file: str = None, tag_message: st
 
 
 def bump_commit_tag_flow(version_part, tag_message: str, config_exists=False) -> str:
-    """ Run the underlying bump2version cli, return updated version """
+    """Run the underlying bump2version cli, return updated version"""
     target_file = constants.DEFAULT_VERSION_FILE if not config_exists else None
     before_version = get_current_version()
     colorama_handler.print_yellow_header("bump-commit-tag")
-    run_bump2version(version_part,
-                     target_file=target_file,
-                     tag_message=f"({{now:%d.%m.%Y}}) - {tag_message}",
-                     commit=True)
+    run_bump2version(version_part, target_file=target_file, tag_message=f"({{now:%d.%m.%Y}}) - {tag_message}", commit=True)
     after_version = get_current_version()
     if before_version == after_version:
         exceptions.FailedVersionIncrement(f"Bump2Version action failed. Version is still {before_version}")

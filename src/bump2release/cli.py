@@ -1,6 +1,7 @@
 import argparse
-from bump2release.release_flow import run_release_flow
+
 from bump2release import b2v_handler
+from bump2release.release_flow import run_release_flow
 
 
 def main():

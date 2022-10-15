@@ -1,5 +1,4 @@
-from bump2release import git_actions
-from bump2release import b2v_handler
+from bump2release import b2v_handler, git_actions
 
 
 def run_release_flow(version_part: str, release_message: str, bump_config_exists: bool):
