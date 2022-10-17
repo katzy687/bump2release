@@ -1,6 +1,6 @@
 import subprocess
 from bump2release import constants, exceptions
-from bump2release.utilities import subprocess_handler
+from bump2release.utilities.subprocess_handler import run_command
 
 
 def build_b2v_command(version_part: str, target_file: str, tag_message: str = None, commit: bool = True) -> str:
@@ -15,11 +15,11 @@ def build_b2v_command(version_part: str, target_file: str, tag_message: str = No
     return cmd
 
 
-def run_b2v(version_part: str, target_file: str = None, tag_message: str = None, commit=False):
+def run_b2v(version_part: str, target_file: str = None, tag_message: str = None, commit=True):
     cmd = build_b2v_command(version_part, target_file, tag_message, commit)
     print(f"Bump2version Command: '{cmd}'")
     try:
-        utils.run_command(cmd)
+        run_command(cmd)
     except subprocess.CalledProcessError as e:
         raise exceptions.Bump2VersionError(f"Issue running Bump2version. stderr: {e.stderr}, output: {e.output}")
     except Exception as e:

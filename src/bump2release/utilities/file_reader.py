@@ -3,7 +3,10 @@ import os
 
 
 def _get_target_file_path(target_file_name, script_dir_path: str = None) -> str:
-    """ allow passing custom script directory, or defaults to relative path of current directory """
+    """
+    allow passing relative or full path of script parent dir
+    defaults to file name for running from current directory
+    """
     if script_dir_path:
         file_path = os.path.join(script_dir_path, target_file_name)
     else:

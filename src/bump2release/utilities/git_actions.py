@@ -14,7 +14,7 @@ def check_if_dirty():
 def validate_branch(current_branch: str):
     if current_branch.lower() not in constants.VALID_BRANCHES:
         err_msg = f"{current_branch} is not valid branch for release. Must be on {constants.VALID_BRANCHES}"
-        exceptions.InvalidBranchError(err_msg)
+        raise exceptions.InvalidBranchError(err_msg)
 
 
 def get_current_branch() -> str:
@@ -33,7 +33,7 @@ def git_pull_latest():
 
 
 def git_push_atomic(new_tag: str, curr_branch: str):
-    colorama_handler.print_yellow_header("pushing tags with atomic commit")
+    colorama_handler.print_yellow_header("pushing tag with atomic commit")
     cmd = f"git push --atomic origin {curr_branch} {new_tag}"
     print(run_command(cmd))
     colorama_handler.print_green(f"Release Tag '{new_tag}' Pushed")
