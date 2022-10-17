@@ -1,5 +1,6 @@
-from bump2release import colorama_handler, constants, exceptions
-from bump2release.utils import run_command
+from bump2release import constants, exceptions
+from bump2release.utilities import colorama_handler
+from bump2release.utilities.subprocess_handler import run_command
 
 
 def check_if_dirty():
