@@ -1,10 +1,11 @@
 import subprocess
+
 from bump2release import constants, exceptions
 from bump2release.utilities.subprocess_handler import run_command
 
 
 def build_b2v_command(version_part: str, target_file: str, tag_message: str = None, commit: bool = True) -> str:
-    """ Build the cli command """
+    """Build the cli command"""
     cmd = f"{constants.BUMP2_VERSION_CLI} {version_part}"
     if target_file:
         cmd += f" {target_file}"

@@ -18,4 +18,3 @@ def print_yellow_header(message: str) -> str:
 def print_red(message: str) -> str:
     init()
     print(f"{Fore.RED}{message}{Style.RESET_ALL}")
-

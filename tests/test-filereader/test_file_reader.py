@@ -2,8 +2,8 @@ import os.path
 
 import pytest
 
-from bump2release.utilities import file_reader
 from bump2release import exceptions
+from bump2release.utilities import file_reader
 
 
 def test_get_version_path():

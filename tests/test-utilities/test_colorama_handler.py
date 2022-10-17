@@ -12,4 +12,3 @@ def test_fstring_input():
     version = "v0.2.2"
     test_input = f"Release Tag '{version}' Pushed"
     colorama_handler.print_green(test_input)
-

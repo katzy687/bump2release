@@ -1,7 +1,9 @@
+from unittest.mock import patch
+
 import pytest
+
 from bump2release import exceptions
 from bump2release.utilities import git_actions
-from unittest.mock import patch
 
 SUBPROCESS_PATCH_PATH = "bump2release.utilities.git_actions.run_command"
 
