@@ -1,6 +1,7 @@
 [![Python 3.9](https://img.shields.io/badge/python-3.9-blue.svg)](https://www.python.org/downloads/release/python/)
 [![Lint and Test](https://github.com/katzy687/bump2release/actions/workflows/lint-test.yml/badge.svg)](https://github.com/katzy687/bump2release/actions/workflows/lint-test.yml)
 [![PyPI version](https://badge.fury.io/py/bump2release.svg)](https://badge.fury.io/py/bump2release)
+[![Downloads](https://pepy.tech/badge/bump2release)](https://pepy.tech/project/bump2release)
 
 # bump2release
 
