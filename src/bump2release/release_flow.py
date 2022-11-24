@@ -1,10 +1,5 @@
 from bump2release import constants, exceptions
-from bump2release.utilities import (
-    b2v_handler,
-    colorama_handler,
-    file_reader,
-    git_actions,
-)
+from bump2release.utilities import b2v_handler, colorama_handler, file_reader, git_actions
 
 
 def bump_commit_tag(version_part, tag_message: str, config_exists=False) -> str:
