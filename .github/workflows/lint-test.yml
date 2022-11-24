@@ -23,12 +23,14 @@ jobs:
         pip install -U -r requirements-dev.txt
         pip install -U -r requirements.txt
         pip install .
-    - name: validate git settings
-      run: |
-        git remote -v
-    - name: run pre-commit linters and formatters ✅
-      # uses: pre-commit/action@v3.0.0
+    - name: run Black Format check ✅
       run: |
         black src --check
         flake8 src
+        pylint src
+    - name: run Flake8 Linter ✅
+      run: |
+        flake8 src
+    - name: run Pylint Linter ✅
+      run: |
         pylint src
