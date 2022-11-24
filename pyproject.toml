@@ -38,3 +38,6 @@ max-bool-expr = 5
 
 [tool.isort]
 line_length=127
+
+[tool.black]
+line-length=127
