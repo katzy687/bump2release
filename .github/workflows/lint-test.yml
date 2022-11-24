@@ -27,4 +27,8 @@ jobs:
       run: |
         git remote -v
     - name: run pre-commit linters and formatters ✅
-      uses: pre-commit/action@v3.0.0
+      # uses: pre-commit/action@v3.0.0
+      run: |
+        black
+        flake8
+        pylint
