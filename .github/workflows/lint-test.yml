@@ -29,6 +29,6 @@ jobs:
     - name: run pre-commit linters and formatters ✅
       # uses: pre-commit/action@v3.0.0
       run: |
-        black
-        flake8
-        pylint
+        black src
+        flake8 src
+        pylint src

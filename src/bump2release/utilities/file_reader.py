@@ -22,7 +22,9 @@ def get_current_version(script_dir_path: str = None):
         with open(file_path) as f:
             version = f.read().strip()
     except FileNotFoundError:
-        raise exceptions.MissingVersionFile(f"No '{constants.DEFAULT_VERSION_FILE}' file found at path '{file_path}'")
+        raise exceptions.MissingVersionFile(
+            f"No '{constants.DEFAULT_VERSION_FILE}' file found at path '{file_path}'"
+        )
     return version
 
 
