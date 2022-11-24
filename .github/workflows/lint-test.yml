@@ -10,16 +10,18 @@ jobs:
   lint-test:
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v3
+    - name: Checkout Repo Action
+      uses: actions/checkout@v3
     - name: Set up Python 🐍
       uses: actions/setup-python@v3
       with:
-        python-version: '3.9'
+        python-version: 3.9
     - name: install ALL dependencies 👷
       run: |
         pip install -U -r requirements-dev.txt
         pip install -U -r requirements.txt
         pip install .
+    - name: Checkout Repo Action
+      uses: actions/checkout@v3
     - name: run pre-commit linters and formatters ✅
-      run: |
-        pre-commit run -a
+      uses: pre-commit/action@v3.0.0
