@@ -15,7 +15,7 @@ pip install bump2release
 
 ### Basic Usage
 
-1. Merge all feature branches to release branch. Either by pull request on remote, or local merge
+1. Merge all feature branches to release branch. Either by pull request on remote, or local merge.
 2. Run bump2Release (alias b2r), passing [SEMVER](https://semver.org/) release type (Major/Minor/Patch), and message for annotated tag
 
 CLI Usage:
