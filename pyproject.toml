@@ -36,4 +36,5 @@ max-args = 13
 max-attributes = 7
 max-bool-expr = 5
 
-
+[tool.isort]
+line_length=127

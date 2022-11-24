@@ -23,14 +23,15 @@ jobs:
         pip install -U -r requirements-dev.txt
         pip install -U -r requirements.txt
         pip install .
-    - name: run Black Format check ✅
+    - name: Check iSort Formating ✅
+      run: |
+        isort src --check
+    - name: Check Black Formating ✅
       run: |
         black src --check
-        flake8 src
-        pylint src
-    - name: run Flake8 Linter ✅
+    - name: Flake8 Linter ✅
       run: |
         flake8 src
-    - name: run Pylint Linter ✅
+    - name: Pylint Linter ✅
       run: |
         pylint src
